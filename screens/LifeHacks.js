@@ -1,13 +1,15 @@
 import React from 'react';
 import { 
     SafeAreaView, 
-    Text  
+    Text,
+    ScrollView  
   } from 'react-native';
 import { db_LifeHacks } from '../components/db'
 import { styles } from '../Styles'
 
 export const LifeHacks = () => {
     return (
+    <ScrollView>
         <SafeAreaView>
             <Text style={styles.title}>LifeHacks</Text>
 
@@ -29,6 +31,8 @@ export const LifeHacks = () => {
             }
 
         </SafeAreaView>
+    </ScrollView>
+
     )
 }
 
