@@ -9,7 +9,7 @@ import { createBottomTabNavigator, BottomTabBar } from '@react-navigation/bottom
 import { Home } from '../screens/Home'
 import { BillionaireHabits } from '../screens/BillionaireHabits'
 import { LifeHacks } from '../screens/LifeHacks'
-import { Motivation } from '../screens/Motivation'
+import { Settings } from '../screens/Settings'
 import { styles } from '../Styles'
 import { COLORS, icons } from '../constants'
 
@@ -29,12 +29,12 @@ const Tabs = () => {
                 options={{
                     tabBarIcon: ({focused}) => (
                         <Image
-                            source={icons.back}
+                            source={icons.home}
                             resizeMode='contain'
                             style={{
                                 width:25,
                                 heigth:25,
-                                tintColor: focused ? COLORS.primary : COLORS.secondary
+                                tintColor: focused ? COLORS.newblue : COLORS.secondary
                             }}
                         />
                     )
@@ -52,24 +52,7 @@ const Tabs = () => {
                             style={{
                                 width:25,
                                 heigth:25,
-                                tintColor: focused ? COLORS.primary : COLORS.secondary
-                            }}
-                        />
-                    )
-                }}
-            />
-            <Tab.Screen
-                name="Motivation"
-                component={Motivation}
-                options={{
-                    tabBarIcon: ({focused}) => (
-                        <Image
-                            source={icons.like}
-                            resizeMode='contain'
-                            style={{
-                                width:25,
-                                heigth:25,
-                                tintColor: focused ? COLORS.primary : COLORS.secondary
+                                tintColor: focused ? COLORS.newblue : COLORS.secondary
                             }}
                         />
                     )
@@ -86,7 +69,24 @@ const Tabs = () => {
                             style={{
                                 width:25,
                                 heigth:25,
-                                tintColor: focused ? COLORS.primary : COLORS.secondary
+                                tintColor: focused ? COLORS.newblue : COLORS.secondary
+                            }}
+                        />
+                    )
+                }}
+            />
+            <Tab.Screen
+                name="Settings"
+                component={Settings}
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <Image
+                            source={icons.settings}
+                            resizeMode='contain'
+                            style={{
+                                width:25,
+                                heigth:25,
+                                tintColor: focused ? COLORS.newblue : COLORS.secondary,
                             }}
                         />
                     )

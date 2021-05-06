@@ -1,19 +1,31 @@
 import React from 'react';
-import { 
+import {
+  View,
   SafeAreaView, 
-  ScrollView, 
-  Text  
+  Text,
+  Button,
 } from 'react-native';
 import { styles } from '../Styles'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export const Home = () => {
+
+
+export const Home = ({ navigation }) => {
 
   return (
-    <ScrollView>
-      <SafeAreaView>
-        <Text style={styles.title}>About this app</Text>
-        <Text style={styles.text}>What makes the rich richer ? What drives their life ? How can an average person develop powerful habits modeling high achievers like Jack Dorsey, Warren Buffet, Jeff Bezos ? In this app you will discover the billionaires habits to start applying to your own life ! Check it out !</Text>
-      </SafeAreaView>
-    </ScrollView>
-    );
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Welcome</Text>
+      <Text style={styles.text}>      
+        In this minimalist app you will discover how to model high achievers like Jack Dorsey, Warren Buffet, Jeff Bezos and others. Start applying their principles right now to your own life.
+      </Text>
+      <Text style={styles.quote}>
+        “We are what we repeatedly do. Excellence, then, is not an act, but a habit.” 
+      </Text>
+      <Text style={styles.quote}>
+        Aristotle, Ancient Greek philosopher
+      </Text>
+
+    </SafeAreaView>
+  );
 }

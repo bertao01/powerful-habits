@@ -1,6 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Alert, Button, Image, View, SafeAreaView, ScrollView, StyleSheet, Text  } from 'react-native';
+import { 
+  Alert, 
+  Button, 
+  View,
+  SafeAreaView, 
+  Text,
+  TouchableOpacity,
+} from 'react-native';
+import { styles } from '../Styles'
 
 export const Person = (props) => {
   
@@ -27,45 +35,22 @@ export const Person = (props) => {
         <Text style={styles.subtitle}>
           {description}, {name}
         </Text>
-        <Image 
-          source={{ uri:imageSrc }}
-          style={styles.image}
-        />
+        <TouchableOpacity>
+        </TouchableOpacity>
         <Text style={styles.subtitle}>
-        Net Worth : {netWorth}
+          Net Worth : {netWorth}
         </Text>
         <Button 
           onPress={createTwoButtonAlert}
           title='DISCOVER HABITS'
         />
-        <StatusBar style="auto" />
+        <View
+          style={{
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+          }}
+        />
 
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    marginBottom: 30,
-    justifyContent: 'center',
-  },
-
-  subtitle:{
-    fontWeight: '800',
-    textAlign:'center',
-    fontSize: 20,
-    margin: 20,
-  },
-
-  image:{
-    borderWidth:2,
-    borderColor:'#000000',
-    borderRadius:20,
-    margin: 20,
-    width: 250,
-    height:250 
-  },
-
-});

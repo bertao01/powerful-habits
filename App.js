@@ -7,13 +7,9 @@ import 'react-native-gesture-handler'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { reactNavigation } from '@react-navigation/stack'
+import { COLORS, icons } from './constants'
 
 // Components import
-import { Home } from './screens/Home'
-import { BillionaireHabits } from './screens/BillionaireHabits'
-import { LifeHacks } from './screens/LifeHacks'
-import { Motivation } from './screens/Motivation'
-import { styles } from './Styles'
 import Tabs from './navigation/tabs'
 
 export default function App() {
@@ -28,19 +24,21 @@ return (
           }}
           initialRouteName={"Home"}
         >
-        <Stack.Screen name="Powerful Habits" component={Tabs} />
+        <Stack.Screen 
+          name="POWERFUL HABITS" 
+          component={Tabs} 
+          options={{
+            headerStyle: {
+            backgroundColor: COLORS.newblue,
+          },          
+            headerTintColor: 'white',
+            headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          headerTitleAlign: 'center'
+          }}  
+        />
       </Stack.Navigator>
     </NavigationContainer>
     );
 }
-
-/*
-
-      <ScrollView style={styles.app}>
-        <Home/>
-        <BillionaireHabits/>
-        <LifeHacks/>
-        <Motivation/>
-      </ScrollView>
-
-*/
