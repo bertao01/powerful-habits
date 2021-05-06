@@ -51,6 +51,18 @@ export const Settings = () => {
                     />
                 </View>
 
+
+                <TouchableOpacity 
+                    style={styles.flexRow}
+                    onPress={() => playStoreLink }                    
+                >
+                    <Text style={styles.text}>
+                        Notifications    
+                    </Text>
+                    <AntDesign name="notification" size={24} color="black" />
+                </TouchableOpacity>
+
+
                 <TouchableOpacity 
                     style={styles.flexRow}
                     onPress={() => playStoreLink }                    
